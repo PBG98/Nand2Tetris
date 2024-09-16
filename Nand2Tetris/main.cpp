@@ -7,6 +7,8 @@ int main(void)
 	
 	string parsingFile = util.GetParsingFilePath();
 
+
+	cout << parsingFile << endl;
 	
 	return 0;	
 }
