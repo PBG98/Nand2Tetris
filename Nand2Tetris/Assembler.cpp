@@ -50,25 +50,19 @@ void Assembler::Assemble()
 		InstructionType type = parser->GetInstructionType();
 		if (type == InstructionType::A_COMMAND)
 		{
-			// A_COMMAND
 			string symbol = parser->Symbol();
 			outputLine = "0" + code->ConvertToBinary(symbol) + '\n';
-			//cout << "A_COMMAND: " << symbol << endl;
 		}
 		else if (type == InstructionType::C_COMMAND)
 		{
-			// C_COMMAND
 			string dest = parser->Dest();
 			string comp = parser->Comp();
 			string jump = parser->Jump();
 			outputLine = "111" + code->Comp(comp) + code->Dest(dest) + code->Jump(jump) + '\n';
-			//cout << "C_COMMAND: " << dest << " " << comp << " " << jump << endl;
 		}
 		else if (type == InstructionType::L_COMMAND)
 		{
-			// L_COMMAND
 			string symbol = parser->Symbol();
-			//cout << "L_COMMAND: " << symbol << endl;
 		}
 		ofs << outputLine;
 		outputLine.clear();	
