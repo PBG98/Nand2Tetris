@@ -5,6 +5,5 @@ class Utility
 {
 public:
 	string GetParsingFilePath();
-
 };
 

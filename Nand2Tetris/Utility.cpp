@@ -10,7 +10,6 @@ string Utility::GetParsingFilePath()
 	char szCurDir[1024]{ 0, };
 	if (_getcwd(szCurDir, sizeof(szCurDir)) != NULL)
 	{
-		cout << "Current working directory : " << szCurDir << endl;
 		curDir = szCurDir;
 	}
 	else
